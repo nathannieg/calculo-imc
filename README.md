@@ -1,11 +1,11 @@
-# Jogo da Adivinhação
+# IMC: calcule o seu
 
 <p align="center">
-  <img src="https://i.imgur.com/NZJ8uSK.png" />
+  <img src="https://i.imgur.com/OtwBar0.png" />
 </p>
 
 <p align="center">
-  <img height="300px" width="auto" src="https://i.imgur.com/GdEBIpu.png" />
+  <img height="300px" width="auto" src="https://i.imgur.com/n9wjFsO.png" />
 </p>
 
 Este projeto é parte do Explorer, programa de desenvolvimento fullstack oferecido pela Rocketseat.

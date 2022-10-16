@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMC: calcule o seu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="error-alert">Digite apenas números.</div>
+      <div class="card">
+        <h1>Cálculo de IMC</h1>
+        <form>
+          <fieldset>
+            <label for="weight">Peso (kg)</label>
+            <input id="weight" type="number" step="0.1" />
+          </fieldset>
+          <fieldset>
+            <label for="height">Altura (cm)</label>
+            <input id="height" type="number" step="0.1" />
+          </fieldset>
+          <button>
+            Calcular
+            <img
+              src="./assets/img/arrow.svg"
+              alt="Seta para a direita"
+              class="calculate-button"
+            />
+          </button>
+        </form>
+      </div>
+      <div class="popup-wrapper">
+        <div class="popup-content">
+          <button class="close-popup-button">
+            <img src="./assets/img/x.svg" alt="Fechar" />
+          </button>
+          <h2 class="popup-result"></h2>
+          <div class="popup-reference">
+            <p>Entenda o resultado:</p>
+            <ul>
+              <li>
+                <img
+                  src="./assets/img/arrow-dark.svg"
+                  alt="Seta para a direita"
+                />Menor que 18,5 - Abaixo do peso
+              </li>
+              <li>
+                <img
+                  src="./assets/img/arrow-dark.svg"
+                  alt="Seta para a direita"
+                />Entre 18,5 e 24,9 - Peso normal
+              </li>
+              <li>
+                <img
+                  src="./assets/img/arrow-dark.svg"
+                  alt="Seta para a direita"
+                />Entre 25 e 29,9 - Sobrepeso
+              </li>
+              <li>
+                <img
+                  src="./assets/img/arrow-dark.svg"
+                  alt="Seta para a direita"
+                />Igual ou acima de 30 - Obesidade
+              </li>
+            </ul>
+            <p class="source">
+              Fonte:
+              <a
+                href="https://bvsms.saude.gov.br/bvs/dicas/215_obesidade.html"
+                target="_blank"
+                >Ministério da Saúde</a
+              >.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Desenvolvido por
+        <a href="https://github.com/nathannieg" target="_blank"
+          >Nathannie Gomes</a
+        >.
+      </p>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

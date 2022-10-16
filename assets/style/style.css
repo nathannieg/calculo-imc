@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--f-color-card);
+}
+
+:root {
+  font-size: 62.5%;
+
+  /*variables*/
+  --ff: 'Roboto', sans-serif;
+
+  --bg-color: #F5F5F5;
+  --bg-error-color: #F03E3E;
+  --bg-card-color: #08C9B1;
+  --bg-bttn-color: rgba(0, 23, 21, 0.62);
+  --bg-bttn-hover: rgba(0, 0, 0, 0.62);
+  --bg-input-color: #FAFBFC;
+  --f-color-card: rgba(0, 23, 21, 0.62);
+  --f-color-input: #212529;
+  --f-color-bttn: #FFFFFF;
+  --f-color-error: #FFFFFF;
+  --f-color-dark: #212529;
+}
+
+body,
+input,
+button {
+  font-family: var(--ff);
+  font-size: 1.6rem;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  height: 100vh;
+}
+
+
+/* MOBILE FIRST */
+
+/* CARD */
+
+.card {
+  background: var(--bg-card-color);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: .6rem;
+  padding: 3.2rem 4.8rem;
+  max-width: 80vw;
+}
+
+h1 {
+  margin-bottom: 3.2rem;
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  color: var(--f-color-card);
+}
+
+form fieldset:nth-child(1) {
+  margin-bottom: 1.6rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: var(--f-color-card);
+}
+
+input {
+  padding: 1.6rem;
+  width: 100%;
+  height: 5.2rem;
+  background: #FAFBFC;
+  border: 1px solid rgba(0, 23, 21, 0.62);
+  border-radius: 4px;
+}
+
+.card button {
+  padding: 1.6rem;
+  width: 100%;
+  height: 5.2rem;
+  background-color: rgba(0, 23, 21, 0.62);
+  border-radius: 4px;
+  margin-top: 3.2rem;
+  color: var(--f-color-bttn);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.card button:hover {
+  background-color: var(--bg-bttn-hover);
+}
+
+
+/* FOOTER */
+
+footer {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+/* POPUP */
+
+.popup-wrapper {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* center elements with grid */
+  display: grid;
+  place-content: center;
+
+  /* hides by default */
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* shows popup when class open is added */
+.popup-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: .6rem;
+  padding: 3.2rem 3.2rem;
+  max-width: 80vw;
+  background-color: var(--bg-color);
+  color: var(--f-color-dark);
+  text-align: center;
+
+  position: relative;
+}
+
+h2 {
+  margin-top: 3rem;
+  background-color: var(--bg-card-color);
+  border-radius: .6rem;
+  padding: 2rem;
+}
+
+.popup-reference p:first-child {
+  margin: 4rem 0 3rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.6rem;
+  font-size: 1.4rem;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.source {
+  margin-top: 3rem;
+  font-size: 1rem;
+}
+
+.close-popup-button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.close-popup-button:hover {
+  transform: scale(1.1);
+}
+
+/* ERROR ALERT */
+
+.error-alert {
+  background-color: var(--bg-error-color);
+  color: var(--f-color-error);
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  text-align: center;
+  padding: 0.5rem 0;
+  
+  transform: 
+  translateY(-40px);
+  transition: transform .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* shows up when class open is added*/
+.error-alert.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

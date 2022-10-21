@@ -51,7 +51,7 @@ form.addEventListener('submit', e => {
 
 // Calculating BMI
 function calculateBMI(height, weight) {
-  BMI = (weight / ((height / 100) * (height / 100))).toFixed(1)
+  const BMI = (weight / ((height / 100) * (height / 100))).toFixed(1)
   return BMI
 }
 
@@ -73,6 +73,8 @@ closePopupButton.addEventListener('click', closePopup)
 
 function closePopup() {
   popup.classList.remove('open')
+  inputHeight.value = ''
+  inputWeight.value = ''
 }
 
 // Clossing error alert message quem starting to type again on input

@@ -47,6 +47,7 @@ O objetivo deste desafio é criar uma calculadora de IMC que vai:
 - Como exibir e esconder elementos HTML de uma página usando JavaScript.
 - Como dar movimento a elementos com animações CSS.
 - Como receber float numbers dentro de um input (usando a propriedade step="0.1").
+- Como limpar inputs automaticamente depois de obeter o resultado do IMC (adicionando um event listener ao botão X, que fecha o popup, e atualizando o value do input para string vazia).
 
 ### Melhorias
 
@@ -54,7 +55,6 @@ O objetivo deste desafio é criar uma calculadora de IMC que vai:
   - Transformar trecho showAlertError em função.
   - Estruturar dados do popup.
   - Modularizar popup.
-- Limpar inputs depois de fechar o popup com o resultado do IMC.
 
 ## Desenvolvedora
 
